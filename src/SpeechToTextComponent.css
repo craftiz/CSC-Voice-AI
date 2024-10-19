@@ -1,0 +1,48 @@
+.speech-to-text-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .language-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .language-selection button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #0078d4;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+  }
+  
+  .language-selection button:hover {
+    background-color: #0078d4;
+    color: white;
+  }
+  
+  .transcripts {
+    margin-top: 20px;
+    border: 1px solid #0078d4;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .translations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .translation {
+    border: 1px solid #0078d4;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  

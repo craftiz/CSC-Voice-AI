@@ -1,0 +1,12 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/9cfbf430-b103-45f9-82c5-9aaa640c2461/resourceGroups/VoiceSpeech_RG/providers/Microsoft.Web/sites/cscVoiceSpeech",
+    "appService.deploySubpath": ".",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "githubPullRequests.remotes": [
+        "origin https://github.com/leventilhan/csc-speech.git",
+        "upstream"
+    ]
+}
