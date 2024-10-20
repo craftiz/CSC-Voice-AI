@@ -59,12 +59,6 @@ export function SpeechToTextComponent() {
           }
         }
         setTranslatedTexts(translations);
-
-        // Tanıma tamamlandığında seçilen dilde seslendirme başlat
-        const selectedTranslation = translations[selectedSynthesisLanguage];
-        if (selectedTranslation) {
-          speakText(selectedTranslation);  // Çevrilen metni seslendir
-        }
       }
     };
 
@@ -123,6 +117,7 @@ export function SpeechToTextComponent() {
       // speechConfig.current.speechSynthesisVoiceName özelliğini ayarlıyoruz
       speechConfig.current.speechSynthesisVoiceName = voiceName;
 
+      // Butona tıklama ile seslendirme tetikleniyor
       synthesizer.current.speakTextAsync(text, (result) => {
         if (result.reason === sdk.ResultReason.SynthesizingAudioCompleted) {
           console.log("Speech synthesis succeeded.");
@@ -187,6 +182,10 @@ export function SpeechToTextComponent() {
             lang.code !== selectedLanguage && (
               <div key={lang.code}>
                 <strong>{lang.name}:</strong> {translatedTexts[lang.code] || 'Çeviri bekleniyor...'}
+                {/* Seslendirme Butonu */}
+                <button onClick={() => speakText(translatedTexts[lang.code])}>
+                  {lang.name} Seslendirme
+                </button>
               </div>
             )
           ))}
