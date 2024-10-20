@@ -152,7 +152,7 @@ export function SpeechToTextComponent() {
 
   return (
     <div>
-      <h1>Konuşma Tanıma ve Çeviri</h1>
+      <h1>Konuşma Tanıma ve Çeviri v0.0.14</h1>
       <div>
         <label>Dili Seçin: </label>
         <select onChange={(e) => setSelectedLanguage(e.target.value)} value={selectedLanguage}>
